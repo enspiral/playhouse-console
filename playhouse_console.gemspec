@@ -16,4 +16,8 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'thor'
   s.add_dependency 'playhouse'
+
+  # These need to become development dependencies only
+  s.add_dependency 'rspec'
+  s.add_dependency 'coveralls'
 end
