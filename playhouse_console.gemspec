@@ -3,7 +3,7 @@ Gem::Specification.new do |s|
   s.version = '0.1.0'
   s.authors = ["Craig Ambrose", "Joshua Vial"]
   s.email = ["craig@enspiral.com", "joshua@enspiral.com"]
-  s.homepage = "https://github.com/enspiral/economatic"
+  s.homepage = "https://github.com/enspiral/playhouse-console"
   s.summary = "A console delivery layer for playhouse"
   s.description = "Based on Thor"
 
