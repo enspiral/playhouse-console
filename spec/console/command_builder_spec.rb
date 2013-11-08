@@ -4,8 +4,8 @@ require 'ostruct'
 
 describe Playhouse::Console::CommandBuilder do
   let(:api) { MockApi.new }
-  let(:play) { mock(:play) }
-  let(:repos) { mock(:repository) }
+  let(:play) { double(:play) }
+  let(:repos) { double(:repository) }
   subject { Playhouse::Console::CommandBuilder.new(api, play) }
 
   class MockApi < OpenStruct
@@ -29,12 +29,12 @@ describe Playhouse::Console::CommandBuilder do
   describe "#build_command" do
     def mock_context(options = {})
       defaults = {method_name: 'destroy_planet', parts: []}
-      mock(:context, defaults.merge(options))
+      double(:context, defaults.merge(options))
     end
 
     def mock_part(options = {})
       defaults = {name: 'star_name', required: false, repository: nil}
-      mock(:part, defaults.merge(options))
+      double(:part, defaults.merge(options))
     end
 
     it "sets the method name from the context" do
